@@ -1,0 +1,12 @@
+<h3 class="widget-title">
+  <a href='{{ "tags/" | relURL }}'>标签</a>
+</h3>
+<ul class="widget-list">
+  {{ range .Site.Taxonomies.tags }}
+  <li>
+    <a href="{{ .Page.Permalink }}">
+    {{ .Page.Title }}
+    </a>
+  </li>
+  {{ end }}
+</ul>

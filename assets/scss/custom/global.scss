@@ -1,0 +1,63 @@
+html {
+  font-family: "LJS", "HYRunYuan" !important;
+  font-feature-settings: "liga", "calt";
+  letter-spacing: 1px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+  min-width: 375px;
+  min-height: 100vh;
+  background-color: #f4f5f5;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.4rem;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.ellipsis-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* 文章详情自动生成的目录 */
+#TableOfContents {
+  margin-bottom: 4rem;
+
+  > ul {
+    padding-left: 1rem !important;
+    list-style: none !important;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+}

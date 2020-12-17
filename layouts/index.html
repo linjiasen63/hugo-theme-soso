@@ -1,0 +1,15 @@
+{{/*
+##########
+首页（即'/'）
+##########
+*/}}
+
+{{ define "main" }}
+  <div>
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "post" "posts")) }}
+    {{ range $index,$data := $paginator.Pages }}
+      {{ .Render "summary"}}
+    {{ end }}
+  </div>
+  {{ partial "paginator" . }}
+{{ end }}

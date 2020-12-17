@@ -1,0 +1,43 @@
+{{/*
+##########
+渲染种子
+##########
+*/}}
+
+<!DOCTYPE html>
+<html>
+  {{/* 网页属性 */}}
+  {{ partial "site-head/index.html" . }}
+
+  <body>
+    {{/* 网页导航 */}}
+    <header class="site-header">
+      <div class="site-wrapper">
+      {{ partial "site-header/index.html" . }}
+      </div>
+    </header>
+ 
+
+    {{/* 网页内容 */}}
+    <div class="site-body">
+     <div class="site-wrapper clearfix">
+      {{/* 网页主体 */}}
+      <main class="site-main">
+      {{ block "main" . }}{{ end }}
+      </main>
+
+      {{/* 网页侧栏 */}}
+      <aside class="site-aside">
+        {{ partial "site-aside/index.html" . }}
+      </aside>
+     </div>
+    </div>
+
+    {{/* 网页信息 */}}
+    {{ block "footer" . }}
+    <footer class="site-footer">
+      {{ partialCached "site-footer/index.html" . }}
+    </footer>
+    {{ end }}
+  </body>
+</html>

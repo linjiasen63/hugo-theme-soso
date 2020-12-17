@@ -1,0 +1,9 @@
+{{/* 主题自带的scripts */}}
+{{ $scripts := (slice) }}
+{{ range $scripts }}
+  <script src="{{ . | relURL }}"></script>
+{{ end }}
+{{/* 用户定制的scripts */}}
+{{ range .Params.customScripts }}
+  <script src="{{ . | relURL }}"></script>
+{{ end }}

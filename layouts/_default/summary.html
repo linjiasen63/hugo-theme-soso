@@ -1,0 +1,17 @@
+<article class="article-item">
+  <a class="article-item-wrapper" href="{{ .Permalink }}">
+    <div class="article-title">
+      {{ if .Title }}
+        {{ .Title }}
+      {{ else }}
+        {{ .File.LogicalName }}
+      {{ end }}
+    </div>
+    <div class="article-info">
+      <span>{{ .PublishDate.Format "2006年01月02日" }} </span>
+    </div>
+    <div class="article-footer">
+      <div class="article-more">查看全文</div>
+    </div>
+  </a>
+</article>

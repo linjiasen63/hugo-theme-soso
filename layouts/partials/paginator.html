@@ -1,0 +1,96 @@
+{{ with .Paginator }}
+
+  {{ if gt .TotalPages 10 }}
+  <div class="page-navigator">
+    <ul class="page-navigator-wrapper">
+      {{ if .HasPrev }}
+      <li class="page-navigator-li prev">
+        <a class="page-navigator-a" href="{{ .Prev.URL | absLangURL }}"><</a>
+      </li>
+      {{else}}
+      <li class="page-navigator-li prev disable">
+        <a class="page-navigator-a"><</a>
+      </li>
+      {{ end }}
+
+      {{ $dynamicPages := slice 1 }}
+
+      {{ if eq .PageNumber 1 }}
+        {{ $dynamicPages = $dynamicPages | append 2 3 -1 }}
+      {{ else if eq .PageNumber 2 }}
+        {{ $dynamicPages = $dynamicPages | append 2 3 4 -1 }}
+      {{ else if eq .PageNumber 3 }}
+        {{ $dynamicPages = $dynamicPages | append 2 3 4 5 -1 }}
+      {{ else if eq .PageNumber (sub .TotalPages 2) }}
+        {{ $dynamicPages = $dynamicPages | append -1 }}
+        {{ $dynamicPages = $dynamicPages | append (sub .PageNumber 2) (sub .PageNumber 1) .PageNumber (add .PageNumber 1) }}
+      {{ else if eq .PageNumber (sub .TotalPages 1) }}
+        {{ $dynamicPages = $dynamicPages | append -1 }}
+        {{ $dynamicPages = $dynamicPages | append (sub .PageNumber 2) (sub .PageNumber 1) .PageNumber }}
+      {{ else if eq .PageNumber .TotalPages }}
+        {{ $dynamicPages = $dynamicPages | append -1 }}
+        {{ $dynamicPages = $dynamicPages | append (sub .PageNumber 2) (sub .PageNumber 1) }}
+      {{ else }}
+        {{ $dynamicPages = $dynamicPages | append -1 }}
+        {{ $dynamicPages = $dynamicPages | append (sub .PageNumber 2) (sub .PageNumber 1) .PageNumber (add .PageNumber 1) (add .PageNumber 2) -1}}
+      {{ end }}
+      {{ $dynamicPages = $dynamicPages | append .TotalPages }}
+
+      {{ range $dynamicPages }}
+        {{ if eq -1 .}}
+        <li class="page-navigator-li">
+          <span>...</span>
+        </li>
+        {{ else }}
+        {{ $pager:=index $.Paginator.Pagers (sub . 1) }}
+        <li class="page-navigator-li {{ if eq . $.Paginator.PageNumber }}current{{ end }}" >
+          <a class="page-navigator-a" href="{{ $pager.URL | absLangURL }}">{{ $pager.PageNumber }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+
+      {{ if .HasNext }}
+      <li class="page-navigator-li next">
+        <a class="page-navigator-a" href="{{ .Next.URL | absLangURL }}">></a>
+      </li>
+      {{ else }}
+      <li class="page-navigator-li next disable">
+        <a class="page-navigator-a">></a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{ else if gt .TotalPages 1 }}
+  <div class="page-navigator">
+    <ul class="page-navigator-wrapper">
+      {{ if .HasPrev }}
+      <li class="page-navigator-li prev">
+        <a class="page-navigator-a" href="{{ .Prev.URL | absLangURL }}"><</a>
+      </li>
+      {{else}}
+      <li class="page-navigator-li prev disable">
+        <a class="page-navigator-a" ><</a>
+      </li>
+      {{ end }}
+
+      {{ range .Pagers }}
+      <li class="page-navigator-li {{ if eq .PageNumber $.Paginator.PageNumber }}current{{ end }}" >
+        <a class="page-navigator-a" href="{{ .URL | absLangURL }}">{{ .PageNumber }}</a>
+      </li>
+      {{ end }}
+
+      {{ if .HasNext }}
+      <li class="page-navigator-li next">
+        <a class="page-navigator-a" href="{{ .Next.URL | absLangURL }}">></a>
+      </li>
+      {{else}}
+      <li class="page-navigator-li next disable">
+        <a class="page-navigator-a">></a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+{{ end }}

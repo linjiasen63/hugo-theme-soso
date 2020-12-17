@@ -1,0 +1,31 @@
+@import "common/normalize.scss";
+
+@import "custom/global.scss";
+@import "custom/layout.scss";
+@import "custom/archives.scss";
+@import "custom/md.light.scss";
+
+@import "partial/site-aside.scss";
+
+.article-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.article-title {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding-bottom: 1.2rem;
+  color: #000
+}
+
+.article-info {
+  color: #999;
+  padding-bottom: 1rem;
+}
+
+.article-footer {
+  text-align: right;
+}

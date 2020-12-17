@@ -1,0 +1,16 @@
+<div>
+  &copy; {{ now.Format "2006" }}
+  <a href="{{ .Site.BaseURL | absURL }}">
+    {{ .Site.Title }} By {{ .Site.Author.name }}
+  </a>
+  {{ if .Site.Params.beian }}
+   | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">
+    {{.Site.Params.beian}}
+  </a>
+  {{ end }}
+</div>
+
+{{/* 脚本 */}}
+{{ block "scripts" . }} 
+  {{ partialCached "site-footer/script.html" . }}
+{{ end }}

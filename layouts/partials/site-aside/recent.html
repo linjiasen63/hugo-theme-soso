@@ -1,0 +1,14 @@
+{{ $postsRecent := (first 5 (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page")) }}
+
+<h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    {{ range $postsRecent }}
+    <li>
+        {{if .Title}}
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        {{else}}
+        <a href="{{ .Permalink }}" title="{{ .File.LogicalName }}">{{ .File.LogicalName }}</a>
+        {{end}}
+    </li>
+    {{ end }}
+</ul>

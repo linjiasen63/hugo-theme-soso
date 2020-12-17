@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="single-archive">
+    {{ range (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page").GroupByPublishDate "2006"}}
+    <div class="archive-group">
+        {{/*  <h2 class="group-title">{{ .Key }}</h2> */}}
+        <ul class="group-post-
+        list">
+            {{ range .Pages }}
+            <li class="group-post">
+                <span class="post-date">{{ .Date.Format " 2006年01月02日 » " }}</span>
+                <a class="post-name" href="{{ .Permalink }}" title="{{ .Title }}">
+                    {{ if .Title }}
+                        {{ .Title }}
+                    {{ else }}
+                        {{ .File.LogicalName }}
+                    {{ end }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+</div>
+{{ partial "paginator" . }}
+{{ end }}

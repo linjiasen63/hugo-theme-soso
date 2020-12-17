@@ -1,0 +1,30 @@
+#search {
+  position:relative;
+  overflow: hidden;
+  height: 3.8rem;
+}
+
+#search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 9rem);
+  padding: 0 1rem;
+  line-height: 3.6rem;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  box-sizing: content-box;
+  outline: none;
+}
+
+#search button {
+  float: right;
+  width: 5rem;
+  height: 3.6rem;
+  border: 1px solid #eee;
+  background-color: #eee;
+  box-sizing: content-box;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}

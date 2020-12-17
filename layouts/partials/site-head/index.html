@@ -1,0 +1,37 @@
+<head {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="{{ .Site.Params.description}}" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="keyword" content="{{ .Site.Params.keyword }}" />
+
+  {{/* 图标 */}}
+  {{- if .Site.Params.favicon -}}
+  <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}" type="image/x-icon"></link>
+  {{- else -}}
+  <link rel="shortcut icon" href="{{ "image/favicon.ico" | relURL }}" type="image/x-icon"></link>
+  {{- end -}}
+
+  {{/* 标题 */}}
+  <title>
+    {{- if .Title -}}
+      {{- .Title -}}
+    {{- else -}}
+      {{- .Site.Title -}}
+    {{- end -}}
+  </title>
+
+  <link rel="canonical" href="{{ .Params.url | relURL }}" />
+
+  
+  {{- partial "site-head/style.html" . -}}
+
+  {{- partial "site-head/script.html" . -}}
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+</head>

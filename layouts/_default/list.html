@@ -1,0 +1,16 @@
+{{/*
+##########
+默认博客post类型资讯 - 列表
+##########
+*/}}
+
+{{ define "main" }}
+<content>
+  <div>
+    {{ range .Paginator.Pages.ByPublishDate }}
+      {{ .Render "summary"}}
+    {{ end }}
+  </div>
+  {{ partial "paginator" . }}
+</content>
+{{ end }}

@@ -1,0 +1,31 @@
+<nav class="site-navbar ">
+  <a class="site-navbar-brand" href="/">{{ .Site.Params.Brand }}</a>
+ 
+  <div class="site-navbar-menu" onclick="toggleNavbarmenu(this)">
+    <div class="icon"></div>
+  </div>
+  <div class="site-navbar-collapse" id="site-navbarText" onclick="toggleNavbarmenu(this)">
+    <span class="site-navbar-text none"></span>
+    <ul class="site-navbar-nav">
+      {{ $currentPage := . }}
+      {{ range.Site.Menus.main }}
+      <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+        <a class="nav-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>
+
+<script>
+function toggleNavbarmenu(ele) {
+  var $parent = $(ele).parent();
+  var className = 'site-navbar-open';
+  if ($parent.hasClass(className)) {
+    $parent.removeClass(className);
+  } else{
+    $parent.addClass(className);
+  }
+}
+</script>
+

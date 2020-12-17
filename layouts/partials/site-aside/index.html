@@ -1,0 +1,19 @@
+<section class="widget">
+  {{ partial "site-aside/search" . }}
+</section>
+
+<section class="widget">
+  {{ partial "site-aside/recent.html" . }}
+</section>
+
+{{if .Site.Taxonomies.categories}}
+<section class="widget">
+  {{ partial "site-aside/categories.html" . }}
+</section>
+{{end}}
+
+{{if .Site.Taxonomies.tags}}
+<section class="widget">
+  {{ partial "site-aside/tags.html" . }}
+</section>
+{{end}}
