@@ -1,0 +1,29 @@
+$font: "LJS", HYRunYuan, "Inconsolata Custom", 黑体;
+
+// 全局主色
+$primaryColor: #1890ff;
+// 链接色
+$linkColor: #1890ff;
+// 成功色
+$successColor: #52c41a;
+// 警告色
+$warningcolor: #faad14;
+// 错误色
+$errorColor: #f5222d;
+// 主字号
+$fontSizeBase: 1.3rem;
+// 标题色
+$headingColor: rgba(0, 0, 0, 0.85);
+// 主文本色
+$textColor: rgba(0, 0, 0, 0.65);
+// 次文本色
+$textColorSecondary: rgba(0, 0, 0, 0.45);
+// 失效色
+$disabledColor: rgba(0, 0, 0, 0.25);
+// 组件/浮层圆角
+$border-radiusBase: 2px;
+// 边框色
+$borderColorBase: #d9d9d9;
+// 浮层阴影
+$boxShadowBase: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);

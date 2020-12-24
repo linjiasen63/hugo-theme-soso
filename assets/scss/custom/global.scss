@@ -1,18 +1,36 @@
+@import "./variable.scss";
+
 html {
-  font-family: "LJS", "HYRunYuan" !important;
+  font-family: $font !important;
   font-feature-settings: "liga", "calt";
+  letter-spacing: 1.6px;
+  color: $textColor;
+  text-align: justify;
+}
+
+.mermaid * {
+  font-family: $font !important;
   letter-spacing: 1px;
-  -webkit-font-smoothing: subpixel-antialiased;
+
+  rect[rx="0"] {
+    rx: 1;
+    ry: 1;
+  }
 }
 
 a {
-  color: #1890ff;
+  color: $linkColor;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
   text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 html {

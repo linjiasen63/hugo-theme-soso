@@ -9,13 +9,13 @@
     font-size: 0;
     text-align: center;
   }
-  
+
   .page-navigator-li {
     display: inline-block;
     font-size: 1.5rem;
-    margin: 0 .8rem 0 0;
+    margin: 0 0.8rem 0 0;
   }
-  
+
   .page-navigator-a {
     display: inline-block;
     min-width: 3.6rem;
@@ -29,21 +29,22 @@
     border-width: 1px;
     border-radius: 1.5px;
   }
-  
+
   .disable .page-navigator-a {
     cursor: not-allowed;
     color: #999;
     background: #f8f8f8;
   }
-  
+
+  $selectColor: #4183c4;
+
   .current .page-navigator-a {
-    color: #1890ff;
-    border-color: #1890ff;
+    color: $selectColor;
+    border-color: $selectColor;
   }
-  
+
   .page-navigator-a:hover {
-    color: #1890ff;
-    border-color: #1890ff;
+    color: $selectColor;
+    border-color: $selectColor;
   }
-  
 }

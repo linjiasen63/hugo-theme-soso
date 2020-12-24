@@ -8,6 +8,11 @@
 <div class="single-default">
   <div>
       <article id="content" class="md-render">
+        {{ if .Title }}
+        <h1 id="title" class="title">{{ .Title }}</h1>
+        {{ else }}
+            <h1 id="title" class="title">{{ .File.LogicalName }}</h1>
+        {{ end }}
         {{ .Content }}
       </article>
   </div>

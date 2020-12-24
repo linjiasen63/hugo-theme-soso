@@ -99,24 +99,21 @@
 
 .widget {
   margin-bottom: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.4rem;
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 0.3rem;
   border: 1px solid #eee;
 }
 
-.widget:last-child {
-  margin-bottom: 0;
-}
-
 .widget-title {
-  color: #6e7173;
-  line-height: 2.7;
-  margin-top: 0;
-  font-size: 1.6rem;
-  border-bottom: 1px solid #ddd;
   display: block;
+  color: #6e7173;
+  line-height: 2.2;
+  margin: 0 0.5rem 0;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
 }
 
 .widget-list {
@@ -125,12 +122,22 @@
 }
 
 .widget-list li {
-  margin: 5px 0;
   line-height: 1.5;
 }
 
 .widget-list li a {
-  font-size: 1.4rem;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  height: 1.5em;
+  padding: 0.5rem;
+  word-break: keep-all;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+
+.widget-list li a:hover {
+  background-color: #f2f2f2;
 }
 
 .site-footer {

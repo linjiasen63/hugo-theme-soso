@@ -1,13 +1,13 @@
-.md-render {
+@import "./variable.scss";
+
+.theme-dark .md-render {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: #c0c0c0;
-  font-size: 14px;
   word-wrap: break-word;
 
   a {
-    color: #4183c4;
     background-color: transparent;
   }
 
@@ -96,15 +96,15 @@
   }
 
   h4 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   h5 {
-    font-size: 0.875em;
+    font-size: 1em;
   }
 
   h6 {
-    font-size: 0.875em;
+    font-size: 1em;
     color: #777;
   }
 
@@ -208,11 +208,11 @@
   tt {
     padding: 0 2px 0 2px;
     font-size: 0.9em;
+    line-height: 1.25;
     border-radius: 3px;
     border: 1px solid #384047 !important;
     background-color: #384047 !important;
-    font-family: "LJS", HYRunYuan, "Inconsolata Custom", "Fira Code Custom",
-      黑体;
+    font-family: $font !important;
   }
 
   code {
@@ -227,7 +227,7 @@
     padding: 10px 20px;
     border: 1px solid #e7eaee !important;
     color: #333 !important;
-    background-color: #f8f8f8 !important;
+    background-color: #384047 !important;
     word-wrap: normal;
   }
 

@@ -51,7 +51,7 @@
 
     {{ if or .Params.comment (and .Site.Params.comment (ne .Params.comment false)) }}
       <!-- gittalk 评论功能 -->
-      {{ if and .Site.Params.GitTalk }}
+      {{ if .Site.Params.GitTalk.enable }}
       <div id="gitalk-container"></div>
       <script>
         const gitalk = new Gitalk({

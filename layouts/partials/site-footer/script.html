@@ -1,9 +1,36 @@
 {{/* 主题自带的scripts */}}
-{{ $scripts := (slice) }}
-{{ range $scripts }}
-  <script src="{{ . | relURL }}"></script>
+{{ $scripts := (slice) }} {{ range $scripts }}
+<script src="{{ . | relURL }}"></script>
 {{ end }}
+
 {{/* 用户定制的scripts */}}
 {{ range .Params.customScripts }}
-  <script src="{{ . | relURL }}"></script>
+<script src="{{ . | relURL }}"></script>
+{{ end }}
+
+<!-- mermaid -->
+{{ if .Site.Params.Mermaid.enable }}
+<!-- <script src="https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js"></script> -->
+<script type="text/javascript" src="/js/mermaid.min.js"></script>
+<script>
+  Array.from(document.getElementsByClassName("language-mermaid")).forEach(function (el) {
+      el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`;
+  });
+  mermaid.initialize({ startOnLoad: true });
+
+  // 更新流程图中条件框的样式
+  setTimeout(function() {
+    Array.from(document.getElementsByTagName("polygon")).forEach(function (el) {
+      {{/*  console.log(el.attributes);  */}}
+      var nodeValue = el.attributes.transform.nodeValue;
+      nodeValue = nodeValue.replace(/\d\d*\.?\d*/ig, function(num) {
+        console.log(num);
+        return num + 'px';
+      });
+      console.log(nodeValue, $(el));
+      $(el).css('transform', 'scaleY(0.68) ' + nodeValue);
+    });
+  }, 100)
+  
+</script>
 {{ end }}

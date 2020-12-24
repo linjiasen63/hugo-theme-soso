@@ -4,7 +4,9 @@
 @import "custom/layout.scss";
 @import "custom/archives.scss";
 @import "custom/md.light.scss";
+@import "custom/md.dark.scss";
 
+@import "partial/paginator.scss";
 @import "partial/site-aside.scss";
 
 .article-item {

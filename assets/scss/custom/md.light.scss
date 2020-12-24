@@ -1,9 +1,10 @@
-.md-render {
+@import "./variable.scss";
+
+.theme-light .md-render {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: #24292e;
-  font-size: 14px;
   word-wrap: break-word;
 
   .title {
@@ -12,7 +13,6 @@
   }
 
   a {
-    color: #4183c4;
     background-color: transparent;
   }
 
@@ -101,15 +101,15 @@
   }
 
   h4 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   h5 {
-    font-size: 0.875em;
+    font-size: 1em;
   }
 
   h6 {
-    font-size: 0.875em;
+    font-size: 1em;
     color: #777;
   }
 
@@ -213,11 +213,11 @@
   tt {
     padding: 0 2px 0 2px;
     font-size: 0.9em;
+    line-height: 1.25;
     border-radius: 3px;
     border: 1px solid #e7eaee !important;
     background-color: #f8f8f8 !important;
-    font-family: "LJS", HYRunYuan, "Inconsolata Custom", "Fira Code Custom",
-      黑体;
+    font-family: $font !important;
   }
 
   code {
