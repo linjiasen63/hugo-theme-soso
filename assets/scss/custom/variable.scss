@@ -1,4 +1,5 @@
-$font: "LJS", HYRunYuan, "Inconsolata Custom", 黑体;
+// $font: "LJS", HYRunYuan, customFont1, customFont2, "Inconsolata Custom", 黑体;
+$font: customFont1, customFont2, "Inconsolata Custom", 黑体;
 
 // 全局主色
 $primaryColor: #1890ff;

@@ -1,3 +1,5 @@
+@import "./variable.scss";
+
 .archive-group {
   padding-bottom: 1.4rem;
 
@@ -10,19 +12,28 @@
   }
 
   .group-post {
+    
+
+    .post-wrapper {
+      display: inline-block;
+      padding: 5px 0;
+    }
+
     .publish-time {
       padding-right: 2rem;
       font-size: 1.5rem;
+      color: rgba(0,0,0,.65);
     }
 
     .post-date {
       padding-right: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      color: rgba(0,0,0,.65);
     }
 
     .post-name {
       padding-right: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 }

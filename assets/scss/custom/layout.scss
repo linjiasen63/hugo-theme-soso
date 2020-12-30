@@ -4,6 +4,9 @@
 
 .site-header {
   z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 5.4rem;
   line-height: 5.4rem;
@@ -73,7 +76,13 @@
 }
 
 .site-body {
-  margin: 2rem auto 0;
+  margin: 0 auto;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 7.4rem;
+  }
 
   .site-wrapper {
     position: relative;
@@ -91,9 +100,9 @@
 }
 
 .site-aside {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 7.4rem;
+  right: 2rem;
   width: 20rem;
 }
 
@@ -113,7 +122,11 @@
   margin: 0 0.5rem 0;
   font-size: 1.3rem;
   border-bottom: 1px solid #ddd;
-  font-weight: bold;
+  font-weight: normal;
+
+  a {
+    display: block;
+  }
 }
 
 .widget-list {
@@ -158,6 +171,11 @@
 /* extra large devices (large desktops, 1200px and up) */
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    font-size: 1.2rem;
+  }
+  
   .site-header {
     position: fixed;
     top: 0;
@@ -170,18 +188,12 @@
 
   .site-body {
     margin-top: 1rem;
-
-    &::before {
-      display: block;
-      content: "";
-      height: 5.4rem;
-    }
   }
 
   .site-main {
     min-height: calc(100vh - 10.4rem);
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 1.5rem 1.2rem;
     border-left: none;
     border-right: none;
     border-radius: 0;
@@ -256,6 +268,36 @@
 
   .site-footer {
     padding: 1rem 0;
+  }
+}
+
+.page-scroll-top {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  width: 5.4rem;
+  height: 5.4rem;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 4px 1px #eee;
+
+  .arr {
+    content: '';
+    display: block;;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 1.3rem auto 0;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    transform: rotate(-45deg);
+  }
+
+  .txt {
+    display: block;
   }
 }
 

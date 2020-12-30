@@ -1,0 +1,22 @@
+<div id="pageScrollTop" class="page-scroll-top">
+  <span class="arr"></span>
+  <span class="txt">顶部</span>
+</div>
+
+<script>
+  var $pageScrollTop = $("#pageScrollTop");
+  $pageScrollTop.hide();
+  $pageScrollTop.on('click', function() {
+    $('html,body').animate({scrollTop: '0px'}, 300);;
+  });
+  $(document).scroll(function () {
+    var scroTop = $(document).scrollTop();
+    var contentHeight = $(document).height();
+
+    if (scroTop > contentHeight * 0.2) {
+      $pageScrollTop.show();
+    } else {
+      $pageScrollTop.hide();
+    }
+  });
+</script>

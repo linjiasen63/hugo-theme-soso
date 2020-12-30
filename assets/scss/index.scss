@@ -3,31 +3,52 @@
 @import "custom/global.scss";
 @import "custom/layout.scss";
 @import "custom/archives.scss";
+
 @import "custom/md.light.scss";
 @import "custom/md.dark.scss";
+@import "custom/md.common.scss";
 
 @import "partial/paginator.scss";
 @import "partial/site-aside.scss";
 
 .article-item {
-  margin-bottom: 2rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #eee;
   cursor: pointer;
+
+  &:first-child {
+    margin-top:  -2rem;;
+  }
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-item {
+  
+    &:first-child {
+      margin-top:  -1.5rem;;
+    }
+  }
 }
 
 .article-title {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding-bottom: 1.2rem;
   color: #000
 }
 
 .article-info {
-  color: #999;
   padding-bottom: 1rem;
+  color: #999;
+  font-size: 1.2rem;;
 }
 
 .article-footer {
   text-align: right;
+  font-size: 1.2rem;;
 }

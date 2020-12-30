@@ -5,12 +5,12 @@
 */}}
 
 {{ define "main" }}
-<content>
+<div class="site-main-wrapper">
   <div>
     {{ range .Paginator.Pages.ByPublishDate }}
       {{ .Render "summary"}}
     {{ end }}
   </div>
   {{ partial "paginator" . }}
-</content>
+</div>
 {{ end }}

@@ -1,5 +1,5 @@
 {{ define "main"}}
-<div class="res-cons">
+<div class="site-main-wrapper res-cons">
   <h3 class="archive-title">
     搜索
     <span class="keyword">哈哈</span>
@@ -52,10 +52,14 @@
           .each(function () {
             var item = $(this);
             var title = item.find("title").text();
-            title = title.toLowerCase();
+            title = title.toLowerCase();  
+            var description = item.find("description").text();
+            description = description.toLowerCase();
             var link = item.find("link").text();
             link = link.toLowerCase();
-            if ( link.indexOf('/posts/') >= 0 && title.indexOf(searchKey.toLowerCase()) >= 0) {
+
+            searchkey = searchKey.toLowerCase();
+            if ( link.indexOf('/posts/') >= 0 && (title.indexOf(searchkey) >= 0 || description.indexOf(searchkey) >= 0)) {
               var url = item.find("link").text();
               var searchItem =
                 `<article class="post"><header><h1 class="post-title"><a href="` +

@@ -1,0 +1,313 @@
+@import "./variable.scss";
+
+.md-render {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  word-wrap: break-word;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: .6rem;
+    text-align: center;
+    border-bottom: none;
+
+    + h2 {
+      margin-top: 0 !important;
+    }
+  }
+
+  a {
+    background-color: transparent;
+  }
+
+  a:active,
+  a:hover {
+    outline-width: 0;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+  }
+
+  h1,
+  h2 {
+    padding-bottom: 0.3em;
+  }
+
+  h1:hover a.anchor,
+  h2:hover a.anchor,
+  h3:hover a.anchor,
+  h4:hover a.anchor,
+  h5:hover a.anchor,
+  h6:hover a.anchor {
+    text-decoration: none;
+  }
+
+  h1 tt,
+  h1 code {
+    font-size: inherit;
+  }
+
+  h2 tt,
+  h2 code {
+    font-size: inherit;
+  }
+
+  h3 tt,
+  h3 code {
+    font-size: inherit;
+  }
+  h4 tt,
+  h4 code {
+    font-size: inherit;
+  }
+
+  h5 tt,
+  h5 code {
+    font-size: inherit;
+  }
+
+  h6 tt,
+  h6 code {
+    font-size: inherit;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    line-height: 1.43;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 1em;
+    color: #777;
+  }
+
+  p,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  table {
+    margin: 0.8em 0;
+  }
+
+  li > ol,
+  li > ul {
+    margin: 0 0;
+  }
+
+  hr {
+    overflow: hidden;
+    height: 2px;
+    margin: 16px 0;
+    padding: 0;
+    border: 0 none;
+    box-sizing: content-box;
+    background-color: #e7e7e7;
+  }
+
+  li p.first {
+    display: inline-block;
+  }
+
+  ul,
+  ol {
+    padding-left: 30px;
+  }
+
+  ul:first-child,
+  ol:first-child {
+    margin-top: 0;
+  }
+
+  ul:last-child,
+  ol:last-child {
+    margin-bottom: 0;
+  }
+
+  blockquote {
+    padding: 0 15px;
+    color: #777;
+  }
+
+  blockquote blockquote {
+    padding-right: 0;
+  }
+
+  table {
+    display: table !important;
+    padding: 0;
+    word-break: initial;
+  }
+
+  table tr {
+    margin: 0;
+    padding: 0;
+  }
+
+  table tr th {
+    margin: 0;
+    padding: 6px 13px;
+    font-weight: bold;
+    border-bottom: 0;
+  }
+
+  table tr td {
+    margin: 0;
+    padding: 6px 13px;
+  }
+
+  table tr th:first-child,
+  table tr td:first-child {
+    margin-top: 0;
+  }
+
+  table tr th:last-child,
+  table tr td:last-child {
+    margin-bottom: 0;
+  }
+
+  code,
+  pre,
+  samp,
+  tt {
+    padding: 0 2px 0 2px;
+    font-size: 0.9em;
+    line-height: 1.25;
+    border-radius: 3px;
+    font-family: $font !important;
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 100%;
+    border-radius: 3px;
+  }
+
+  pre {
+    padding: 10px 20px;
+    border: 1px solid #e7eaee !important;
+    word-wrap: normal;
+  }
+
+  pre code {
+    overflow: visible;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    max-width: auto;
+    line-height: inherit;
+    font-size: 100%;
+    white-space: pre;
+    word-wrap: normal;
+    color: #333 !important;
+    border: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  .highlight {
+    margin-bottom: 16px;
+  }
+
+  .highlight pre {
+    margin-bottom: 0;
+    word-break: normal;
+  }
+
+  .highlight pre,
+  pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 100%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+  }
+
+  .md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+
+  .md-task-list-item > input {
+    margin-left: -1.3em;
+  }
+
+  .md-fences {
+    background-color: #f8f8f8;
+  }
+
+  .mathjax-block > .code-tooltip {
+    bottom: 0.375rem;
+  }
+
+  .md-mathjax-midline {
+    background: #fafafa;
+  }
+
+  .md-image > .md-meta {
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+  }
+
+  .md-tag {
+    color: #a6a6a6;
+    opacity: 1;
+  }
+
+  .md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .sidebar-tabs {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .md-render {
+    .title {
+      text-align: left;
+    }
+  }
+}
