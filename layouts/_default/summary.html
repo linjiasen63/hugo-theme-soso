@@ -8,7 +8,10 @@
       {{ end }}
     </div>
     <div class="article-info">
-      <span>{{ .PublishDate.Format "2006年01月02日" }} </span>
+      <div class="date">{{ .PublishDate.Format "2006年01月02日" }} </div>
+      {{ if .Description }}
+      <div class="description" >{{.Description}}</div>
+      {{ end }}
     </div>
     <div class="article-footer">
       <div class="article-more">查看全文</div>

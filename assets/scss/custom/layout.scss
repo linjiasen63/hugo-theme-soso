@@ -274,7 +274,7 @@
 .page-scroll-top {
   position: fixed;
   bottom: 4rem;
-  right: 2rem;
+  right: 1.2rem;
   width: 5.4rem;
   height: 5.4rem;
   border: 1px solid #eee;
@@ -314,6 +314,10 @@
 
   .site-aside {
     width: 25%;
+  }
+
+  .page-scroll-top { 
+    right: 2rem;
   }
 }
 

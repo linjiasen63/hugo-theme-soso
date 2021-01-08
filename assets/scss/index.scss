@@ -18,19 +18,14 @@
   cursor: pointer;
 
   &:first-child {
-    margin-top:  -2rem;;
-  }
-
-  &:hover {
-    background-color: #f2f2f2;
+    margin-top: -2rem;
   }
 }
 
 @media (max-width: 768px) {
   .article-item {
-  
     &:first-child {
-      margin-top:  -1.5rem;;
+      margin-top: -1.5rem;
     }
   }
 }
@@ -38,17 +33,30 @@
 .article-title {
   display: inline-block;
   font-size: 1.5rem;
-  padding-bottom: 1.2rem;
-  color: #000
+  padding-bottom: 1rem;
+  color: #000;
 }
 
 .article-info {
   padding-bottom: 1rem;
-  color: #999;
-  font-size: 1.2rem;;
+  font-size: 1.2rem;
+
+  .date {
+    color: #999;
+  }
+
+  .description {
+    overflow: hidden;
+    display: -webkit-box;
+    padding-top: 1rem;
+    color: #333;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.4;
+  }
 }
 
 .article-footer {
   text-align: right;
-  font-size: 1.2rem;;
+  font-size: 1.2rem;
 }

@@ -1,0 +1,23 @@
+
+{{/*
+##########
+详情：post
+##########
+*/}}
+  
+{{ define "main" }}
+<style>
+  .md-render{
+    text-indent: 2em;
+  }
+</style>
+<div class="site-main-wrapper">
+  <div class="single-post">
+    <div>
+      <article id="content" class="md-render">
+        <h1 id="title" class="title">{{ .Title }}</h1>
+        {{ .Content }}
+      </article>
+    </div>
+</div>
+{{ end }}
