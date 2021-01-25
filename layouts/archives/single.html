@@ -4,8 +4,7 @@
         {{ range (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page").GroupByPublishDate "2006-01"}}
         <div class="archive-group">
             <h2 class="group-title">{{ .Key }}</h2>
-            <ul class="group-post-
-            list">
+            <ul class="group-post-list">
                 {{ range .Pages }}
                 <li class="group-post">
                     <a class="post-wrapper" href="{{ .Permalink }}" title="{{ .Title }}">
