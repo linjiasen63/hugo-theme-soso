@@ -107,6 +107,8 @@
 }
 
 .widget {
+  overflow: hidden;
+  max-height: 20.8rem;
   margin-bottom: 1rem;
   padding: 1rem 1.4rem;
   box-sizing: border-box;
