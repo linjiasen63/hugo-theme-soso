@@ -89,3 +89,9 @@ body {
     list-style-type: square;
   }
 }
+
+
+p > img {
+  display: block;
+  width: 100%;
+}
