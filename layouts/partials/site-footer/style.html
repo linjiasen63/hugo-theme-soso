@@ -1,2 +1,2 @@
 {{ $style := resources.Get "scss/footer.scss" | toCSS | minify | fingerprint }}
-<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+<link href="{{ $style.RelPermalink }}" rel="stylesheet" />
