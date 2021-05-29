@@ -1,4 +1,5 @@
 .page-navigator {
+  overflow: auto;
   margin-top: 2rem;
   list-style: none;
   text-align: right;
@@ -9,6 +10,7 @@
     padding: 0;
     font-size: 0;
     text-align: center;
+    white-space: nowrap;
   }
 
   .page-navigator-li {
